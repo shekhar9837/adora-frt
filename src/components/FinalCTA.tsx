@@ -1,5 +1,4 @@
-import { Sparkles, ArrowRight } from 'lucide-react';
-
+import { motion } from 'motion/react';
 const FinalCTA = () => {
   return (
     <section className="py-24 bg-gradient-to-br from-[#f4f7ff] via-[#e8f4ff] to-[#f4f7ff] relative overflow-hidden">
@@ -8,7 +7,7 @@ const FinalCTA = () => {
       <div className="absolute top-20 left-10 w-64 h-64 bg-[#3420e5]/10 rounded-full blur-3xl" />
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
       
-      <div className="relative max-w-4xl mx-auto px-6 text-center">
+      {/* <div className="relative max-w-4xl mx-auto px-6 text-center">
         <div className="space-y-8">
           <div className="flex items-center justify-center gap-3 mb-6">
             <Sparkles size={32} className="text-[#3420e5]" />
@@ -50,7 +49,32 @@ const FinalCTA = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
+
+       {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-6 relative z-50">
+              <motion.button
+                whileHover={{ y: -3 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ type: "tween", stiffness: 100, duration: 0 }}
+                className="bg-gradient-to-b w-[30rem] h-[7rem] from-blue-400 to-blue-500 inset-shadow-sm border-none inset-shadow-blue-300 hover:inset-shadow-blue-400  text-white px-8 py-4 rounded-2xl font-semibold text-4xl  transition-all duration-300 shadow-blue-200 hover:shadow-xl flex items-center justify-center gap-2"
+              >
+                {/* <Sparkles size={20} /> */}
+                <span className="p-2 bg-white rounded-full flex items-center justify-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    fill="currentColor"
+                    viewBox="0 0 256 256"
+                    className="text-blue-500"
+                  >
+                    <path d="M231.4,44.34s0,.1,0,.15l-58.2,191.94a15.88,15.88,0,0,1-14,11.51q-.69.06-1.38.06a15.86,15.86,0,0,1-14.42-9.15L107,164.15a4,4,0,0,1,.77-4.58l57.92-57.92a8,8,0,0,0-11.31-11.31L96.43,148.26a4,4,0,0,1-4.58.77L17.08,112.64a16,16,0,0,1,2.49-29.8l191.94-58.2.15,0A16,16,0,0,1,231.4,44.34Z"></path>
+                  </svg>
+                </span>
+                Get Started
+              </motion.button>
+            </div>
     </section>
   );
 };

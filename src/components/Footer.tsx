@@ -1,4 +1,4 @@
-import { Instagram, Twitter, Linkedin, Mail, Sparkles } from 'lucide-react';
+import { Instagram, Twitter, Linkedin, Mail } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -9,9 +9,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-[#3420e5] rounded-xl flex items-center justify-center">
-                <Sparkles size={20} className="text-white" />
-              </div>
+              
               <span className="text-2xl font-bold text-[#1a1a1a]">Adora</span>
             </div>
             <p className="text-[#4d4d4d] leading-relaxed max-w-sm">

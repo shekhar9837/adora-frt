@@ -10,7 +10,7 @@ const Features = () => {
       title: "Create polished, on-brand scenes for your product in seconds.",
       description:
         "Place your product in scenes designed to convert. Instantly generate branded, studio-quality visuals tailored for your audience—no set design, no hassle.",
-      image: "/bag.webp",
+      image: "/virtual-try-on.png",
     },
     {
       id: 2,
@@ -101,7 +101,7 @@ const Features = () => {
                 <img
                   src={feature.image}
                   alt={feature.title}
-                  className="w-full h-full object-cover  transition-all duration-500"
+                  className="w-full h-[60vh] object-cover  transition-all duration-500"
                   
                   />
               {/* </div> */}
