@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
+import { AnimatePresence, motion } from 'motion/react';
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -30,11 +31,14 @@ const FAQ = () => {
   return (
     <section className="py-24 bg-white">
       <div className="max-w-4xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a1a] mb-4">
+        <div className="text-center flex flex-col items-center mb-10">
+            <p className="text-sm  w-fit font-medium text-blue-600 border border-white rounded-2xl px-3 py-1 shadow-md mb-4">
+            FAQ
+            </p>
+          <h2 className="text-2xl md:text-4xl font-bold text-[#1a1a1a] mb-4">
             Frequently Asked Questions
           </h2>
-          <p className="text-xl text-[#4d4d4d]">
+          <p className="text-md text-[#4d4d4d]">
             Everything you need to know about Adora
           </p>
         </div>
@@ -43,33 +47,44 @@ const FAQ = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-white border border-gray-200 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-gray-100 border-[1px] border-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              <button
+              <motion.button
+              initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+    transition={{ delay: index * 0.1, duration: 0.5, ease: "easeOut" }}
+                
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 className="w-full flex items-center justify-between p-6 text-left"
               >
-                <h3 className="text-lg font-semibold text-[#1a1a1a] pr-4">
+                <h3 className="text-lg font-medium text-neutral-700 pr-4">
                   {faq.question}
                 </h3>
                 <div className="flex-shrink-0">
                   {openIndex === index ? (
-                    <ChevronUp size={24} className="text-[#3420e5]" />
+                    <ChevronUp size={15} className="text-neutral-600" />
                   ) : (
-                    <ChevronDown size={24} className="text-[#4d4d4d]" />
+                    <ChevronDown size={15} className="text-neutral-600" />
                   )}
                 </div>
-              </button>
+              </motion.button>
               
-              <div className={`overflow-hidden transition-all duration-300 ${
-                openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-              }`}>
-                <div className="px-6 pb-6">
-                  <p className="text-[#4d4d4d] leading-relaxed">
-                    {faq.answer}
-                  </p>
-                </div>
-              </div>
+ <AnimatePresence initial={false}>
+      {openIndex === index && (
+        <motion.div
+          key="content"
+          initial={{ height: 0, opacity: 0 }}
+          animate={{ height: "auto", opacity: 1 }}
+          exit={{ height: 0, opacity: 0 }}
+          transition={{ duration: 0.4, ease: "easeInOut" }}
+          className="overflow-hidden"
+        >
+          <div className="px-6 pb-6">
+            <p className="text-neutral-500 leading-relaxed">{faq.answer}</p>
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
             </div>
           ))}
         </div>

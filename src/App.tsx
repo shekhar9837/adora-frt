@@ -1,9 +1,6 @@
-
-import TrustedBy from './components/TrustedBy'
 import Hero from './components/Hero'
 import HowItWorks from './components/HowItWorks'
 import Features from './components/Features'
-import AdGallery from './components/AdGallery'
 import FAQ from './components/FAQ'
 import FinalCTA from './components/FinalCTA'
 import Footer from './components/Footer'
@@ -19,10 +16,10 @@ function App() {
       </div>
       {/* <div className="bg-red-500"> */}
         <Hero />
-        <TrustedBy />
+        {/* <TrustedBy /> */}
         <HowItWorks />
         <Features />
-        <AdGallery />
+        {/* <AdGallery /> */}
         <FAQ />
         <FinalCTA />
         <Footer />
