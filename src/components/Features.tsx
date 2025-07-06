@@ -101,7 +101,7 @@ const Features = () => {
                 <img
                   src={feature.image}
                   alt={feature.title}
-                  className="w-full h-[60vh] object-cover  transition-all duration-500"
+                  className="w-full h-full object-cover  transition-all duration-500"
                   
                   />
               {/* </div> */}
