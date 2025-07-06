@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className="">
-      <div className="absolute left-0 right-0 top-5 z-50">
+      <div className="sticky left-0 right-0 top-5 z-50">
         <Navbar />
       </div>
       {/* <div className="bg-red-500"> */}

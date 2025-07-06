@@ -1,5 +1,6 @@
 
 import { motion } from "motion/react";
+import { Element } from "react-scroll";
 
 const Features = () => {
 
@@ -31,6 +32,8 @@ const Features = () => {
   ];
 
   return (
+    <Element name="features" >
+
     <section className="py-24 relative">
       <div className="max-w-7xl mx-auto px-6 space-y-32">
         {/* Warm Orange Glow Left */}
@@ -112,6 +115,8 @@ const Features = () => {
         ))}
       </div>
     </section>
+        </Element>
+
   );
 };
 

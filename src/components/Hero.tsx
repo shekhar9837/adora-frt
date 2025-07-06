@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
-
+import { Element } from "react-scroll";
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const adExamples = [
-    { id: 1, title: "Fashion Ad", image: '/yupp-generated-image-616181.png' },
+    { id: 1, title: "Fashion Ad", image: "/yupp-generated-image-616181.png" },
     { id: 2, title: "Tech Product", image: "/chocalate-cake.png" },
     { id: 3, title: "Food & Drink", image: "/dumbless.png" },
     { id: 4, title: "Lifestyle", image: "/ear-buds.png" },
@@ -17,11 +17,11 @@ const Hero = () => {
     { id: 9, title: "Shoes", image: "/shoes.jpg" },
     { id: 10, title: "Bag", image: "/women-bagg.jpg" },
     // { id: 11, title: "Laptop", image: "/laptop.png" },
-    {id :12, title:"Heels", image: "/heels.webp" },
-    {id:13, title:"keyboard", image: "/keyboard.png" },
-    {id:14, title:"Notebook", image: "/notebook.png" },
-    {id:15, title:"Sunglasses", image: "/sunglasses.png" },
-    {id:16, title:"wireless earbuds", image: "/wireless-earbuds.png" },
+    { id: 12, title: "Heels", image: "/heels.webp" },
+    { id: 13, title: "keyboard", image: "/keyboard.png" },
+    { id: 14, title: "Notebook", image: "/notebook.png" },
+    { id: 15, title: "Sunglasses", image: "/sunglasses.png" },
+    { id: 16, title: "wireless earbuds", image: "/wireless-earbuds.png" },
   ];
 
   useEffect(() => {
@@ -32,32 +32,26 @@ const Hero = () => {
   }, []);
 
   return (
-    <section 
-      
-    className="relative w- flex items-center justify-center ">
-  {/* Blue Glow Top */}
-    <div
-      className="absolute inset-0 z-0"
-      style={{
-        background: "#ffffff",
-        backgroundImage: `
+    <Element name='/' >
+    <section className="relative w- flex items-center justify-center ">
+      {/* Blue Glow Top */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          background: "#ffffff",
+          backgroundImage: `
           radial-gradient(
             circle at top center,
             rgba(59, 130, 246, 0.5),
             transparent 70%
           )
         `,
-        filter: "blur(80px)",
-        backgroundRepeat: "no-repeat",
-      }}
-    />
-     
+          filter: "blur(80px)",
+          backgroundRepeat: "no-repeat",
+        }}
+      />
 
- 
-      
       <div className="relative  mx-auto pt-28 pb-16 w-full">
-       
-
         <div className="relative z-10">
           {/* Headline */}
           <div className="absolute inset-0    " />
@@ -114,22 +108,23 @@ const Hero = () => {
             {/* Render two sets of adExamples for infinite looping effect */}
             {[...adExamples, ...adExamples].map((ad, idx) => (
               <div
-          key={`${ad.id}-${idx}`}
-          className="w-64 h-80 mx-4 flex-shrink-0 opacity-100 hover:opacity-50 transition-opacity duration-300 "
+                key={`${ad.id}-${idx}`}
+                className="w-64 h-80 mx-4 flex-shrink-0 opacity-100 hover:opacity-50 transition-opacity duration-300 "
               >
-          <img
-            src={ad.image}
-            alt={ad.title}
-            width={256}
-            height={320}
-            className={`object-cover w-full h-full bg-gradien rounded-2xl shadow-xl flex items-center justify-center`}
-          />
+                <img
+                  src={ad.image}
+                  alt={ad.title}
+                  width={256}
+                  height={320}
+                  className={`object-cover w-full h-full bg-gradien rounded-2xl shadow-xl flex items-center justify-center`}
+                />
               </div>
             ))}
           </div>
         </div>
       </div>
     </section>
+    </Element>
   );
 };
 
