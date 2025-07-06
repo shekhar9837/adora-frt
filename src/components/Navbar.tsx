@@ -1,23 +1,28 @@
 import React from "react";
 import { motion } from "motion/react";
 import { Link } from "react-scroll";
+import { MenuIcon } from "lucide-react";
 
 const Navbar: React.FC = () => {
   return (
     // <nav>
-    <div className="max-w-[1200px]  mx-auto flex items-center justify-between py-3 px-8 rounded-xl bg-gray-100 backdrop-blur-sm">
+    <div className="max-w-[1200px]  md:mx-auto flex items-center justify-between py-3 px-2 md:px-8 md:rounded-xl md:bg-gray-100 backdrop-blur-sm">
       {/* Left: Brand */}
       <Link
         to="/"
         smooth={true}
         duration={500}
-        className="flex-1 font-medium text-xl tracking-wider text-neutral-800 cursor-pointer"
+        className="hidden md:flex flex-1 font-medium text-xl tracking-wider text-neutral-800 cursor-pointer"
       >
         Adora
       </Link>
 
+      <div>
+        <MenuIcon className="md:hidden flex text-neutral-800 cursor-pointer" />
+      </div>
+
       {/* Center: Nav Links */}
-      <div className="flex-2 flex justify-center gap-8 font-medium text-neutral-800">
+      <div className="flex-2 hidden md:flex justify-center gap-8 font-medium text-neutral-800">
         <Link
           to="features"
           smooth={true}
@@ -37,7 +42,7 @@ const Navbar: React.FC = () => {
           whileHover={{ y: -3 }}
           whileTap={{ scale: 0.95 }}
           transition={{ type: "tween", stiffness: 100, duration: 0 }}
-          className="bg-gradient-to-b from-neutral-700 to-neutral-900 border-none text-white px-6 py-3 rounded-xl font-medium text-sm transition-all duration-300 shadow-neutral-200 hover:shadow-xl"
+          className="bg-gradient-to-b from-neutral-700 to-neutral-900 border-none text-white px-6 py-3 rounded-xl font-medium text-sm transition-all duration-300 shadow-neutral-200 hover:shadow-xl hidden md:flex"
         >
           Login
         </motion.button>

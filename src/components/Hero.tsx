@@ -51,25 +51,25 @@ const Hero = () => {
         }}
       />
 
-      <div className="relative  mx-auto pt-28 pb-16 w-full">
+      <div className="relative  mx-auto pt-2 md:pt-28 pb-16 w-full">
         <div className="relative z-10">
           {/* Headline */}
           <div className="absolute inset-0    " />
           <div className="relative text-center px-4 pt-20 md:px-8 max-w-7xl mx-auto ">
-            <h1 className="text-3xl md:text-6xl font-semibold  text-black leading-none tracking-tight">
+            <h1 className="text-4xl md:text-6xl  font-semibold  text-black leading-none tracking-tight">
               Turn Text or Images
-              <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-b from-blue-400 to-blue-500">
+              <br className="hidden md:flex" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-b from-blue-400 to-blue-500 ml-2 md:mx-0">
                 into Ads That
               </span>
-              <br />
-              <span className=" ">Convert Instantly</span>
+              <br className="hidden md:inline-block" />
+              <span className=" mx-2 md:mx-0">Convert Instantly</span>
             </h1>
 
             {/* Subheadline */}
-            <p className="text-sm md:text-md text-slate-900 max-w-xl mx-auto font-medium mt-2">
+            <p className="text-sm md:text-md text-slate-900 max-w-xs md:max-w-xl mx-auto font-medium mt-2">
               Upload a product or enter a text. Get ad-ready visuals
-              <br />
+              <br  className="hidden md:flex"/>
               in under 10 seconds.
             </p>
 
