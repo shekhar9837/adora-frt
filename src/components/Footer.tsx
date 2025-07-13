@@ -1,4 +1,5 @@
 import { Instagram, Twitter, Linkedin, Mail } from 'lucide-react';
+import { Link } from 'react-scroll';
 
 const Footer = () => {
   return (
@@ -18,7 +19,7 @@ const Footer = () => {
             <div className="flex items-center gap-2 text-[#4d4d4d]">
               <Mail size={16} />
               <a href="mailto:hello@adora.ai" className="hover:text-[#3420e5] transition-colors">
-                hello@adora.ai
+                hello@adora
               </a>
             </div>
           </div>
@@ -28,29 +29,34 @@ const Footer = () => {
             <h4 className="text-lg font-semibold text-[#1a1a1a]">Explore</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-[#4d4d4d] hover:text-[#3420e5] transition-colors">
+                {/* <a href="#" className="text-[#4d4d4d] hover:text-[#3420e5] transition-colors">
                   How It Works
-                </a>
+                </a> */}
               </li>
               <li>
-                <a href="#" className="text-[#4d4d4d] hover:text-[#3420e5] transition-colors">
+                <Link to='features' smooth={true} className="text-[#4d4d4d] hover:text-[#3420e5] transition-colors cursor-pointer">
                   Features
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-[#4d4d4d] hover:text-[#3420e5] transition-colors">
+                <Link to="pricing" smooth={true} className="text-[#4d4d4d] hover:text-[#3420e5] transition-colors cursor-pointer">
                   Pricing
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-[#4d4d4d] hover:text-[#3420e5] transition-colors">
+                {/* <a href="#" className="text-[#4d4d4d] hover:text-[#3420e5] transition-colors">
                   Templates
-                </a>
+                </a> */}
               </li>
               <li>
-                <a href="#" className="text-[#4d4d4d] hover:text-[#3420e5] transition-colors">
+                {/* <a href="#" className="text-[#4d4d4d] hover:text-[#3420e5] transition-colors">
                   Blog
-                </a>
+                </a> */}
+              </li>
+               <li>
+                <Link to="faq" smooth={true} className="text-[#4d4d4d] hover:text-[#3420e5] transition-colors cursor-pointer">
+                  FAQ
+                </Link>
               </li>
             </ul>
           </div>

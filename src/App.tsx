@@ -1,8 +1,6 @@
 import Hero from './components/Hero'
-import HowItWorks from './components/HowItWorks'
 import Features from './components/Features'
 import FAQ from './components/FAQ'
-import FinalCTA from './components/FinalCTA'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 
@@ -17,11 +15,12 @@ function App() {
       {/* <div className="bg-red-500"> */}
         <Hero />
         {/* <TrustedBy /> */}
-        <HowItWorks />
+        {/* <HowItWorks /> */}
         <Features />
         {/* <AdGallery /> */}
+        {/* <Pricing/> */}
         <FAQ />
-        <FinalCTA />
+        {/* <FinalCTA /> */}
         <Footer />
       {/* </div> */}
     </div>

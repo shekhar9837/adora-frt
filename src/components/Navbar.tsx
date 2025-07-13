@@ -4,15 +4,25 @@ import { Link } from "react-scroll";
 import { MenuIcon } from "lucide-react";
 
 const Navbar: React.FC = () => {
+    const fadeUpVariants = {
+  initial: { opacity: 0, y: -20 },
+  animate: { opacity: 1, y: 0 },
+};
+
   return (
     // <nav>
-    <div className="max-w-[1200px]  md:mx-auto flex items-center justify-between py-3 px-2 md:px-8 md:rounded-xl md:bg-gray-100 backdrop-blur-sm">
+    <motion.div 
+    variants={fadeUpVariants}
+       initial="initial"
+          animate="animate"
+          transition={{ duration: 0.5, delay: 0.4 }}
+    className="max-w-[1200px]  md:mx-auto flex items-center justify-between py-3 px-2 md:px-8 md:rounded-xl bg-gray-100 backdrop-blur-sm border border-gray-100 shadow-md">
       {/* Left: Brand */}
       <Link
         to="/"
         smooth={true}
         duration={500}
-        className="hidden md:flex flex-1 font-medium text-xl tracking-wider text-neutral-800 cursor-pointer"
+        className="hidden md:flex flex-1 font-medium text-xl tracking-wider text-neutral-800 hover:text-neutral-900 cursor-pointer"
       >
         Adora
       </Link>
@@ -27,11 +37,13 @@ const Navbar: React.FC = () => {
           to="features"
           smooth={true}
           duration={500}
-          className="cursor-pointer"
+          className="cursor-pointer hover:text-blue-500 transition-colors duration-300"
         >
           Features
         </Link>
-        <Link to="faq" smooth={true} duration={500} className="cursor-pointer">
+        <Link to="faq" smooth={true} duration={500} 
+                  className="cursor-pointer hover:text-blue-500 transition-colors duration-300"
+>
           FAQ
         </Link>
       </div>
@@ -67,7 +79,7 @@ const Navbar: React.FC = () => {
           Get Started
         </motion.button>
       </div>
-    </div>
+    </motion.div>
     // </nav>
   );
 };

@@ -1,5 +1,5 @@
-import { motion } from "motion/react";
 import { Element } from "react-scroll";
+import FeatureCard from "./ui/feature-card";
 
 const Features = () => {
   const featureList = [
@@ -9,23 +9,23 @@ const Features = () => {
       title: "Create polished, on-brand scenes for your product in seconds.",
       description:
         "Place your product in scenes designed to convert. Instantly generate branded, studio-quality visuals tailored for your audience—no set design, no hassle.",
-      image: "/virtual-try-on.png",
+      image: "/placeholder1.png",
     },
     {
       id: 2,
       smallSlogan: "Product Mockups",
-      title: "Powered Product Mockups",
+      title: "Transform Boring Photos into Scroll-Stopping Ads",
       description:
-        "Transform boring photos into scroll-stopping ads. Our AI creates professional product mockups that grab attention and drive sales.",
-      image: "/wireless-earbuds.png",
+        "Upload a product photo and get ad-ready mockups in seconds. No photoshoots or setups—just scroll-stopping creative, every time.",
+      image: "/placeholder2.png",
     },
     {
       id: 3,
       smallSlogan: "Virtual Model Try-On",
-      title: "Virtual Model Try-On",
+      title: "Showcase your products on lifelike AI models, no photoshoots required.",
       description:
-        "No studios, no hiring. Just launch-ready ads. Our AI creates realistic lifestyle scenes with virtual models showcasing your products.",
-      image: "/black-bottle.png",
+        "Perfect for apparel, beauty, wellness & lifestyle products. No studios, no hiring—just launch-ready ads with a single click.",
+      image: "/placeholder3.png",
     },
   ];
 
@@ -67,47 +67,8 @@ const Features = () => {
           </div>
 
           {featureList.map((feature) => (
-            <div
-              key={feature.id}
-              className={`flex  w-full ${
-                feature.id % 2 === 0 ? "md:flex-row-reverse flex-col-reverse" : "md:flex-row flex-col"
-              }  md:gap-16  items-center bg-white border-white rounded-[2rem] overflow-hidden  shadow-lg relative`}
-            >
-              <div className="space-y-6 relative w-full md:w-[50%] py-12 md:py-16 px-8 md:px-12">
-                <div className="flex items-center gap-3">
-                  <h3 className="text-sm font-medium  text-blue-600 border border-white rounded-2xl px-3 py-1 shadow-md">
-                    {feature.smallSlogan}
-                  </h3>
-                </div>
-                <p className="text-xl md:text-5xl font-semibold text-neutral-800">
-                  {feature.title}
-                </p>
-                <p className="text-neutral-600">{feature.description}</p>
-
-                {/* CTA Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-6">
-                  <motion.button
-                    whileHover={{ y: -3 }}
-                    whileTap={{ scale: 0.95 }}
-                    transition={{ type: "tween", stiffness: 100, duration: 0 }}
-                    className="bg-gradient-to-b w-full from-blue-400 to-blue-500 inset-shadow-sm border-none inset-shadow-blue-300 hover:inset-shadow-blue-400  text-white px-8 py-4 rounded-2xl font-semibold text-md  transition-all duration-300 shadow-blue-200 hover:shadow-xl flex items-center justify-center gap-2"
-                  >
-                    Get Started for free
-                  </motion.button>
-                </div>
-              </div>
-
-              <div className="relative w-full md:w-[50%]">
-                {/* <div className="bg-gradient-to-br from-[#f4f7ff] to-white rounded-2xl p-8 shadow-xl"> */}
-                <img
-                  src={feature.image}
-                  alt={feature.title}
-                  className="w-full h-full object-cover  transition-all duration-500"
-                />
-                {/* </div> */}
-              </div>
-            </div>
-          ))}
+  <FeatureCard key={feature.id} feature={feature} />
+))}
         </div>
       </section>
     </Element>
