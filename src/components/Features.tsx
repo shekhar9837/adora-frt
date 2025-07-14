@@ -3,31 +3,32 @@ import FeatureCard from "./ui/feature-card";
 
 const Features = () => {
   const featureList = [
-    {
-      id: 1,
-      smallSlogan: "Smart Scene Generation",
-      title: "Create polished, on-brand scenes for your product in seconds.",
-      description:
-        "Place your product in scenes designed to convert. Instantly generate branded, studio-quality visuals tailored for your audience—no set design, no hassle.",
-      image: "/placeholder1.png",
-    },
-    {
-      id: 2,
-      smallSlogan: "Product Mockups",
-      title: "Transform Boring Photos into Scroll-Stopping Ads",
-      description:
-        "Upload a product photo and get ad-ready mockups in seconds. No photoshoots or setups—just scroll-stopping creative, every time.",
-      image: "/placeholder2.png",
-    },
-    {
-      id: 3,
-      smallSlogan: "Virtual Model Try-On",
-      title: "Showcase your products on lifelike AI models, no photoshoots required.",
-      description:
-        "Perfect for apparel, beauty, wellness & lifestyle products. No studios, no hiring—just launch-ready ads with a single click.",
-      image: "/placeholder3.png",
-    },
-  ];
+  {
+    id: 1,
+    smallSlogan: "AI-Powered Scene Builder",
+    title: "Generate Branded Product Scenes Instantly",
+    description:
+      "Effortlessly place your product into AI-designed environments built to drive conversions. Studio-quality, brand-aligned visuals—created in seconds, no set design needed.",
+    image: "/placeholder1.png",
+  },
+  {
+    id: 2,
+    smallSlogan: "Instant Product Mockups",
+    title: "Turn Simple Photos into High-Converting Ads",
+    description:
+      "Just upload your product image—our engine transforms it into professional ad creatives instantly. No expensive shoots, no creative block, just results.",
+    image: "/placeholder2.png",
+  },
+  {
+    id: 3,
+    smallSlogan: "AI Model Try-On",
+    title: "Display Products on Realistic AI Models, Instantly",
+    description:
+      "Ideal for fashion, skincare, and lifestyle brands. Showcase your items on hyper-realistic AI models—no photo sessions, no model bookings, just plug-and-play visuals.",
+    image: "/placeholder3.png",
+  },
+];
+
 
   return (
     <Element name="features">
